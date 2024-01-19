@@ -116,6 +116,20 @@ async def start_pm(client, message: Message, _):
         served_chats = len(await get_served_chats())
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
+        accha = await message.reply_text(
+            text=random.choice(EMOJIOS),
+        )
+        await asyncio.sleep(1.3)
+        await accha.edit("__ᴅιиg ᴅσиg ꨄ︎ ѕтαятιиg..__")
+        await asyncio.sleep(0.2)
+        await accha.edit("__ᴅιиg ᴅσиg ꨄ sтαятιиg.....__")
+        await asyncio.sleep(0.2)
+        await accha.edit("__ᴅιиg ᴅσиg ꨄ︎ sтαятιиg..__")
+        await asyncio.sleep(0.2)
+        await accha.delete()
+        umm = await message.reply_sticker(sticker=random.choice(STICKER))
+        await asyncio.sleep(2)
+        await umm.delete()
         await message.reply_photo(
             random.choice(YUMI_PICS),
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),
