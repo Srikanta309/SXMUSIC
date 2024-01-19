@@ -1,5 +1,6 @@
 import time
 import random
+from DAXXMUSIC.dil import EMOJIOS, STICKER 
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -46,6 +47,20 @@ async def start_pm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
+            accha = await m.reply_text(
+            text=random.choice(EMOJIOS),
+            )
+            await asyncio.sleep(1.3)
+            await accha.edit("__ᴅιиg ᴅσиg ꨄ︎ ѕтαятιиg..__")
+            await asyncio.sleep(0.2)
+            await accha.edit("__ᴅιиg ᴅσиg ꨄ sтαятιиg.....__")
+            await asyncio.sleep(0.2)
+            await accha.edit("__ᴅιиg ᴅσиg ꨄ︎ sтαятιиg..__")
+            await asyncio.sleep(0.2)
+            await accha.delete()
+            umm = await m.reply_sticker(sticker=random.choice(STICKER))
+            await asyncio.sleep(2)
+            await umm.delete()
             return await message.reply_photo(
                 random.choice(YUMI_PICS),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
