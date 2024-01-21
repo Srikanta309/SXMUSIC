@@ -2,7 +2,7 @@ import random
 import string
 
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
+from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message, InlineKeyboardButton
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
